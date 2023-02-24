@@ -359,7 +359,7 @@ AC_ARG_WITH(system-enet,
 )
 AM_CONDITIONAL([SYSTEM_ENET], [test "x$system_enet" = xyes])
 AM_COND_IF([SYSTEM_ENET],
-		   PKG_CHECK_MODULES(LIBENET, [libenet], ,AC_MSG_ERROR([libenet not found!])))
+		   [PKG_CHECK_MODULES(LIBENET, [libenet], ,AC_MSG_ERROR([libenet not found!]))])
 dnl Even if using system enet, still need to config the local version for running make dist
 AC_CONFIG_SUBDIRS([lib-src/enet])
 
