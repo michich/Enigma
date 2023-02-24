@@ -74,8 +74,6 @@ desktop-file-install \
 
 appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_datadir}/appdata/enigma.appdata.xml
 
-%find_lang %{name}
-
 %files
 %{_bindir}/enigma
 %{_mandir}/man?/enigma.*
@@ -84,7 +82,7 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_datadir}/appdata/enigma.
 %{_datadir}/applications/enigma.desktop
 %{_datadir}/appdata/enigma.appdata.xml
 
-%files data -f %{name}.lang
+%files data
 %{_pkgdocdir}
 %{_datadir}/enigma
 
