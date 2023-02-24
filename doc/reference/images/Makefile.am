@@ -2,7 +2,7 @@
 PNG = first_level.png construction.png ralD006_1.png
 
 CONVERT=convert
-CONVERTOPT = -density 112x112 -units PixelsPerCentimeter
+CONVERTOPT = -density 112x112 -units PixelsPerCentimeter -define png:exclude-chunks=date
 
 # Enable out of source build
 GFXDIR = $(abs_srcdir)/../../../data/gfx48
